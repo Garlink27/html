@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISHA</title>
+    <link rel="stylesheet" href="index4.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">ISHA</div>
+    </div>
+    <div class="main-content">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#" class="active">Historial</a></li>
+                <li><a href="#">Configuracion</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Cuenta</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="transcription-box">
+                <p>uso de nuestra aplicación nuestra hace transcripciones en vivo de las clases de grupos y clases la capacidad de subir archivos resumir lo dicho y transcrito en las clases y generar imágenes Y a partir del resumen de la clase esto para facilitar el aprendizaje de personas problemas auditivos también facilitar el aprendizaje de alumnos con tdah o alumnos en general Al ver transcrito lo dicho en clase apoyado con imágenes generadas en IA</p>
+            </div>
+            <div class="instruction">
+                <button id="run-script-btn">Button</button>
+                <p>Presiona el botón de iniciar sesión para comenzar con la transcripción de texto en tiempo real.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('run-script-btn').addEventListener('click', function() {
+            fetch('/run-script', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Error:', data.error);
+                } else {
+                    console.log('Output:', data.output);
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

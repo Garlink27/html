@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.actions a {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.actions .login {
+    background-color: black;
+    color: white;
+}
+
+.actions .signup {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px; /* Oval border */
+}
+
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+
+.up-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.down-column {
+    flex: 1;
+    padding: 20px; /* Increase padding for more distance */
+}
+
+.highlight-box, .description-box, .footer {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.image-placeholder, .presentation-photo {
+    background-color: #ddd;
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+}
+
+.contact-info {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    display: block;
+    margin: 10px 0;
+}
+
+.app-links button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.app-links .ios {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.app-links .android {
+    background-color: #28a745;
+    color: #fff;
+}
